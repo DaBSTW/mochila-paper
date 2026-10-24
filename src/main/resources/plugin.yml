@@ -1,0 +1,16 @@
+name: Morral
+version: '${version}'
+main: com.dabstw.morral.MorralPlugin
+api-version: '26.1'
+description: Mochilas con niveles, parches cosibles y mecánicas únicas.
+author: DaBSTW
+permissions:
+  morral.use:
+    description: Abrir y usar mochilas.
+    default: true
+  morral.admin:
+    description: Comandos de administración de Morral.
+    default: op
+  morral.bypass.candado:
+    description: Abrir mochilas con candado ajenas.
+    default: op

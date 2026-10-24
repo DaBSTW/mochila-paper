@@ -1,0 +1,43 @@
+# ==========================================
+#  Morral - Mochilas vivas para Paper
+# ==========================================
+
+# Peso: cuantas más casillas ocupadas lleves (sumando todas tus mochilas),
+# más lento caminas. Pon "activado: false" para desactivarlo.
+peso:
+  activado: true
+  # Casillas ocupadas a partir de las cuales recibes Lentitud I
+  umbral-lento: 100
+  # Casillas ocupadas a partir de las cuales recibes Lentitud II
+  umbral-muy-lento: 180
+
+# Parche "Imán"
+iman:
+  radio: 6.0
+  fuerza: 0.35
+
+# Parche "Compactador": materiales que nunca se compactan
+compactador:
+  excluir: []
+
+# ¿Se pueden guardar cajas de shulker y bundles dentro de una mochila?
+permitir-shulkers: false
+permitir-bundles: false
+
+mensajes:
+  prefijo: "<dark_gray>[<gradient:#c08552:#f3c892>Morral</gradient>]</dark_gray> "
+  sin-permiso: "<red>No tienes permiso para hacer eso."
+  candado: "<red>Esta mochila tiene candado. Solo <gold><dueno></gold> puede abrirla."
+  objeto-prohibido: "<red>Ese objeto no cabe en una mochila."
+  parche-cosido: "<green>Has cosido el parche <aqua><parche></aqua> en tu mochila."
+  parche-lleno: "<red>Tu mochila no tiene más espacio para parches. Mejórala para coser más."
+  parche-repetido: "<red>Tu mochila ya tiene ese parche."
+  parche-descosido: "<yellow>Has descosido el parche <aqua><parche></aqua>."
+  sin-parches: "<red>Esta mochila no tiene parches."
+  candado-ajeno: "<red>Solo el dueño puede quitar el candado."
+  no-mochila-mano: "<red>Debes tener una mochila en la mano."
+  peso: "<gray>Tus mochilas pesan... <dark_gray>(<used> casillas ocupadas)"
+  rellenado: "<gray>Tu mochila te ha rellenado <white><objeto></white>."
+  recargado: "<green>Configuración recargada."
+  entregado: "<green>Entregado <white><objeto></white> a <white><jugadores></white> jugador(es)."
+  desbordado: "<yellow>Algunos objetos no cabían en la mochila y se te han devuelto."
