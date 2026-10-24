@@ -1,6 +1,7 @@
 package com.dabstw.morral.listener;
 
 import com.dabstw.morral.MorralPlugin;
+import com.dabstw.morral.backpack.BackpackHolder;
 import com.dabstw.morral.backpack.BackpackManager;
 import com.dabstw.morral.item.BackpackData;
 import com.dabstw.morral.item.Items;
@@ -161,9 +162,10 @@ public final class PlayerListener implements Listener {
     @EventHandler(priority = EventPriority.LOWEST)
     public void onDeathFlush(PlayerDeathEvent event) {
         Player player = event.getPlayer();
-        if (manager.session(player) == null) return;
+        BackpackHolder holder = manager.session(player);
+        if (holder == null) return;
         if (event.getKeepInventory()) {
-            manager.closeAll();
+            manager.handleClose(player, holder);
             return;
         }
         List<ItemStack> candidates = new ArrayList<>(event.getDrops());
